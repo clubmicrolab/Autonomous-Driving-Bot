@@ -21,7 +21,7 @@ void ReportStatus()
 {
 	Serial.println("Motor Status: ");
 	Serial.print(digitalRead(TRACTION_MOTOR_PIN));
-	Serial.println("Traction Motor: ");
+	Serial.println("Turning Status: ");
 	Serial.print(digitalRead(DIRECTION_ENA_PIN));
 }
 
@@ -89,6 +89,8 @@ void setup()
 	pinMode(DIRECTION_ENA_PIN, OUTPUT);
 	pinMode(DIRECTION_IN1_PIN, OUTPUT);
 	pinMode(DIRECTION_IN2_PIN, OUTPUT);
+	pinMode(BRAKE_FRONT_PIN, OUTPUT);
+	pinMode(BRAKE_REAR_PIN, OUTPUT);
 }
 
 void loop()
@@ -111,11 +113,11 @@ void loop()
 			Turn_Right();
 			break;
 		case 'w':
-			Serial.println("Called Command Traction_MotorOn");
+			Serial.println("Called Command: Traction_MotorOn");
 			Traction_MotorOn();
 			break;
 		case 's':
-			Serial.println("Called Command Traction_MotorOff");
+			Serial.println("Called Command: Traction_MotorOff");
 			Traction_MotorOff();
 			break;
 		case 'x':
