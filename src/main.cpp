@@ -1,5 +1,7 @@
 #include <Arduino.h>
 
+#define BRAKE_FRONT_PIN 5
+#define BRAKE_REAR_PIN 6
 #define TRACTION_MOTOR_PIN 8
 #define DIRECTION_ENA_PIN 9
 #define DIRECTION_IN1_PIN 10
@@ -12,6 +14,8 @@ void Turn_Left();
 void Turn_Right();
 void Turn_Stop();
 void Vehicle_Reset();
+void Brake_Front();
+void Brake_Rear();
 
 void ReportStatus()
 {
@@ -19,6 +23,20 @@ void ReportStatus()
 	Serial.print(digitalRead(TRACTION_MOTOR_PIN));
 	Serial.println("Traction Motor: ");
 	Serial.print(digitalRead(DIRECTION_ENA_PIN));
+}
+
+void Brake_Front()
+{
+	digitalWrite(BRAKE_FRONT_PIN, HIGH);
+	delay(1000);
+	digitalWrite(BRAKE_FRONT_PIN, LOW);
+}
+
+void Brake_Rear()
+{
+	digitalWrite(BRAKE_REAR_PIN, HIGH);
+	delay(1000);
+	digitalWrite(BRAKE_REAR_PIN, LOW);
 }
 
 void Traction_MotorOn()
