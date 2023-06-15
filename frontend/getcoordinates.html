@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #e8f4b6;
+      margin: 0;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .coordinates-container {
+      background-color: #cbd8f5;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+    
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    #coordinates {
+      font-size: 16px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Get Coordinates</h1>
+  </div>
+  <div class="coordinates-container">
+    <h2>Current Coordinates</h2>
+    <p id="coordinates"></p>
+  </div>
+  <script src="getcoordinates.js"></script>
+</body>
+</html>

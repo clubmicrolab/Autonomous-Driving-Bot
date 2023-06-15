@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agrobot Tracking</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body onload="">
+    <header>
+        <img class="logo" src="img/Logo2.png">
+    </header>
+<div id="map"></div>
+
+    <div class="buttons">
+        <button onclick="openGetCoordinatesPage()">Get Coordinates</button>
+        <button onclick="openBatteryStatusPage()">Battery Status</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+
+<script>
+    $(function(){ 
+        initMap();
+
+    });
+</script>
+
+<script>
+    function openGetCoordinatesPage() {
+      window.location.href = "getcoordinates.html";
+    }
+
+    function openBatteryStatusPage() {
+      window.location.href = "batterystatus.html";
+    }
+  </script>
+  
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Battery Status</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.battery {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+body.red {
+  background-color: red;
+}
+
+body.green {
+  background-color: green;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Battery Status</h1>
+    <div id="battery" class="battery"></div>
+  </div>
+  <script src="batterystatus.js"></script>
+</body>
+</html>
