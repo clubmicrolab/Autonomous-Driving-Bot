@@ -122,6 +122,14 @@ void loop()
 			Serial.println("Called Command: Turn_Stop");
 			Turn_Stop();
 			break;
+		case 'j':
+			Serial.println("Called Command: Brake_Front");
+			Brake_Front();
+			break;
+		case 'k':
+			Serial.println("Called Command: Brake_Rear");
+			Brake_Rear();
+			break;
 		case ' ':
 			Serial.println("Called Command: Vehicle_Reset");
 			Vehicle_Reset();
